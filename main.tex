@@ -1,0 +1,47 @@
+\documentclass{dissert}
+
+\include{settings/preamble}
+
+\begin{document}
+
+% Титульный лист
+\input{src/0-title/title}
+
+% Нумерация должна начинаться со второй страницы
+\setcounter{page}{2}
+
+% Оглавление
+\newpage
+\tableofcontents
+
+% Введение
+\newpage{}
+\chapterbul{Введение}{src/1-text/0-intro}
+
+% Основная часть
+\clearpage
+\input{src/1-text/chapter0}
+
+\clearpage
+\input{src/1-text/chapter1}
+
+\clearpage
+\input{src/1-text/chapter2}
+
+% % Выводы
+\chapterbul{Выводы}{src/appendix/conclusion}
+
+\chapterbul{Список оcновных обозначений}{src/appendix/notations}
+
+\clearpage 
+\addcontentsline{toc}{section}{Список иллюстраций}
+\listoffigures
+
+\clearpage
+\addcontentsline{toc}{section}{Список таблиц}
+\listoftables
+
+\clearpage
+\bibl{src/2-bib/refs}
+
+\end{document}

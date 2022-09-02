@@ -1,0 +1,59 @@
+\newcommand{\paragraph}[1]{\noindent\textbf{#1}\quad}
+
+%% \image{PATH_TO_IMG}{Название}{label}{scale}
+\newcommand{\image}[4]{
+    \begin{figure}[!ht]\center
+    \includegraphics[width=#4\textwidth]{#1}
+    \caption{#2}
+    \label{#3}
+    \end{figure}
+}
+
+
+%% \chapterbul{Название главы}{ссылка на *.tex}
+\newcommand{\chapterbul}[2]{
+    \newpage
+    \addcontentsline{toc}{section}{#1}
+    \chapter*{#1}
+    \input{#2}
+}
+
+%% \bibl{ссылка на *.bib}
+\newcommand{\bibl}[1]{
+    \newpage
+    \addcontentsline{toc}{section}{Список литературы}
+    \renewcommand{\bibname}{Список литературы}
+    \nocite{*}
+    \bibliography{#1}
+}
+
+%% \createtable{название таблицы}{label}{каркас таблицы}
+\newcommand{\createtable}[3]{
+    \begin{table}[!ht]
+        \caption{#1}
+        \label{#2}
+        \begin{center}
+            \resizebox{\textwidth}{!}{
+                {#3}
+            }
+        \end{center}
+    \end{table}
+}
+
+%% \createtheorem{label}{text}
+\newcommand{\createtheorem}[2]{
+    \begin{theorem}
+    \label{#1}
+        {#2}
+    \end{theorem}
+}
+
+%% \createeq{label}{text}
+\newcommand{\createeq}[2]{
+   \begin{gather}
+    \label{#1}
+        \begin{aligned}
+            {#2}
+        \end{aligned}
+    \end{gather}
+}

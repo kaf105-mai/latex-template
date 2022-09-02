@@ -1,0 +1,69 @@
+\chapter{Основные команды}
+
+В этом разделе познакомимся с основными командами, которые могут пригодиться.
+
+\section{Цитирование и ссылка}
+Цитированные работы нужно вставить в формате BibTeX в файл е \textit{src/2-bib/refs.bib}
+
+Большинство академических сайтов (google scholar, iee и др.) поддерживают такой формат цитирования. Для сайтов, которые не поддерживают BibTeX, в папке \textit{src/2-bib/template} лежат шаблоны для самостоятельного внесения источника.
+
+Запись BibTeX выглядит как показано ниже\\[0.25cm]
+
+
+@type\{id,
+
+...
+
+\}\\[0.25cm]
+
+
+Для цитирования используется команда \textbf{cite\{id\}}
+
+Например, Lorem ipsum dolor sit amet \text{cite\{pobedryaMSS\}}
+
+Lorem ipsum dolor sit amet \cite{pobedryaMSS}
+
+Также можно ссылаться на уравнения и теоремы, \textbf{eqref\{id\}, ref\{id\}} соответсвенно.
+
+Запись теоремы выглядит как показано ниже\\[0.25cm]
+
+
+createtheorem\;\{id\}\;\{text\}\\[0.25cm]
+
+
+
+Например, В теореме \textbf{ref\{th:vitae\}} используетя \textbf{eqref\{eq:st:3\}} и 
+\textbf{eqref\{ch-2:eq:st:7\}}
+
+В теореме \ref{th:vitae} используетя \eqref{eq:st:3} и \eqref{ch-2:eq:st:7}
+
+\createeq{eq:st:3}{E = mc^2}
+
+\clearpage
+\section{Макросы}
+Находятся в папке \textit{settngs/macros}
+
+\subsection{Кратинки}
+Команда \textbf{image\{PATH\_TO\_IMG\}\{Название\}\{label\}\{scale\}}
+\image{src/img/logo.jpg}{Символика МАИ}{fg:st:plate}{0.35}
+
+\subsection{Таблицы}
+Команда \textbf{createtable\{название таблицы\}\{label\}\{каркас таблицы\}} 
+\createtable
+{Анализ роста числа параметров при развитии моделей глубокого обучения}
+{tb:intro:1}
+{
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+    Название               & AlexNet     & VGGNet      & ResNet      & BERT     & mT5   & GPT3  \\ \hline
+    Год                          & 2012        & 2014        & 2015        & 2018     & 2020  & 2020  \\ \hline
+    Тип данных             & изображение & изображение & изображение & текст    & текст & текст \\ \hline
+    Число параметров, млрд & $0{,}06$    & $0{,}13$    & $0{,}06$    & $0{,}34$ & $13$  & $175$ \\ \hline
+    \end{tabular}
+}
+
+\subsection{Уравнения и теоремы}
+Команда \textbf{createeq or createtheorem\{label\}\{text\}}
+
+\subsection{Глава без нумерации}
+Команда \textbf{chapterbul\{Название главы\}\{ссылка на *.tex\}}
