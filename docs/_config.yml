@@ -1,6 +1,6 @@
 title: latex-template
-baseurl: "/"
-url: "https://just-the-docs.github.io" 
+baseurl: "/latex-template"
+url: "https://kaf105-mai.github.io" 
 
 remote_theme: just-the-docs/just-the-docs
 # theme: just-the-docs
