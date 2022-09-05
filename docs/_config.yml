@@ -5,6 +5,12 @@ url: "https://kaf105-mai.github.io"
 remote_theme: just-the-docs/just-the-docs
 # theme: just-the-docs
 
+aux_links:
+  "latex-template on Overleaf":
+    - "https://www.overleaf.com/latex/templates/template-kaf105-mai-for-report/ypzjzmbntpyw"
+
+aux_links_new_tab: true
+
 permalink: pretty
 exclude: 
   - "Template.pdf"
