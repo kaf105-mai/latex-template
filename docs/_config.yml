@@ -8,6 +8,10 @@ remote_theme: just-the-docs/just-the-docs
 aux_links:
   "latex-template on Overleaf":
     - "https://www.overleaf.com/latex/templates/template-kaf105-mai-for-report/ypzjzmbntpyw"
+    
+  "latex-template on github":
+    - "https://github.com/kaf105-mai/latex-template"
+   
 
 aux_links_new_tab: true
 
